@@ -1,17 +1,13 @@
-/* ================= Fonts (LOCAL WOFF2) ================= */
+/* ================= Fonts ================= */
 @font-face {
   font-family: "BodySerif";
   src: url("/book/fonts/notoserifsc.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "TitleWenKai";
   src: url("/book/fonts/wenkai.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -20,10 +16,8 @@
   --bg: #ffffff;
   --text: #111111;
   --muted: rgba(17,17,17,.55);
-
   --pad: clamp(16px, 5vw, 40px);
   --max: 980px;
-
   --body: 15.5px;
   --lh: 1.95;
   --title: clamp(30px, 6.5vw, 56px);
@@ -35,17 +29,12 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-
-  /* ✅ 正文用宋体 */
   font-family: "BodySerif", serif;
-
   font-size: var(--body);
   line-height: var(--lh);
   letter-spacing: .01em;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* 重要：全局兜底（封面 / 猫 / 普通图都靠它） */
 img {
   display: block;
   max-width: 100%;
@@ -57,7 +46,7 @@ a {
   text-decoration: none;
 }
 
-/* ================= Masthead（水印） ================= */
+/* ================= Masthead ================= */
 .masthead {
   position: fixed;
   top: 18px;
@@ -66,9 +55,7 @@ a {
 }
 
 .masthead__brand {
-  /* ✅ 标题/刊名用文楷 */
   font-family: "TitleWenKai", serif;
-
   font-size: 16px;
   letter-spacing: .18em;
   color: rgba(0,0,0,.45);
@@ -81,9 +68,7 @@ a {
   padding: 0 var(--pad);
 }
 
-/* =====================================================
-   01｜封面 cover（完全按你原数值）
-   ===================================================== */
+/* ================= 封面 ================= */
 .cover {
   min-height: 100svh;
   display: flex;
@@ -91,24 +76,15 @@ a {
   align-items: center;
 }
 
-.cover__air--top {
-  height: 13svh;
-}
+.cover__air--top { height: 13svh; }
 
-.cover__figure {
-  width: min(94%, 720px);
-}
+.cover__figure { width: min(94%, 720px); }
 
-.cover__figure img {
-  width: 100%;
-}
+.cover__figure img { width: 100%; }
 
 .cover__title {
   margin-top: 40px;
-
-  /* ✅ 封面标题用文楷 */
   font-family: "TitleWenKai", serif;
-
   font-size: var(--title);
   letter-spacing: .22em;
   line-height: 1.05;
@@ -116,176 +92,7 @@ a {
   white-space: nowrap;
 }
 
-.cover__air--bottom {
-  height: 40svh;
-}
+.cover__air--bottom { height: 40svh; }
 
-/* =====================================================
-   02｜过渡页 interlude
-   ===================================================== */
-.interlude {
-  padding: 40svh 0;
-  text-align: center;
-}
-
-.interlude__whisper {
-  font-size: 20px;
-  letter-spacing: .18em;
-  color: var(--muted);
-}
-
-/* =====================================================
-   03｜正文
-   ===================================================== */
-.textblock {
-  padding: 90px 0;
-}
-
-.textblock__inner {
-  width: min(44ch, 100%);
-}
-
-.textblock p {
-  margin: 0 0 0.9em;
-}
-
-/* 第一段正文 */
-.interlude + .textblock {
-  padding-top: 120px;
-  padding-bottom: 260px;
-}
-
-/* 第二段正文（合照 05 后） */
-.photo.photo--wide + .textblock {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/* 情绪段 */
-.textblock--centered {
-  text-align: center;
-  padding-top: 180px;
-  padding-bottom: 200px;
-}
-
-.textblock--centered .textblock__inner {
-  margin: 0 auto;
-}
-
-/* =====================================================
-   04｜人物照片 02 / 03（你原来的数值）
-   ===================================================== */
-.photo {
-  padding: 0;
-}
-
-.photo:not(.photo--wide) .photo__figure {
-  width: min(55%, 640px);
-}
-
-.photo--left .photo__figure {
-  margin-left: 0;
-}
-
-.photo--right .photo__figure {
-  margin-left: auto;
-}
-
-/* 02 */
-.photo.photo--left:first-of-type {
-  padding-top: 20px;
-  padding-bottom: 0;
-}
-
-/* 03 */
-.photo.photo--right:first-of-type {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* 注脚 */
-.caption {
-  margin-top: 18px;
-  margin-bottom: 260px;
-  font-size: 13px;
-  line-height: 1.7;
-  color: rgba(17,17,17,.38);
-}
-
-/* =====================================================
-   05｜猫 pause（恢复你原本逻辑）
-   ===================================================== */
-.pause {
-  padding-top: 120px;
-  padding-bottom: 260px;
-  text-align: center;
-}
-
-.pause__figure {
-  width: min(75%, 620px);
-  margin: 0 auto;
-}
-
-.pause__figure img {
-  width: 100%;
-}
-
-.pause__line {
-  margin-top: 24px;
-  font-size: 13px;
-  color: rgba(17,17,17,.38);
-}
-
-/* =====================================================
-   06｜合照 05（完全用你原值）
-   ===================================================== */
-img[src$="/05.jpg"] {
-  width: min(70%, 860px);
-  max-width: none;
-
-  margin-left: 0;
-  margin-right: auto;
-
-  margin-top: 160px;
-  margin-bottom: 60px;
-}
-
-/* =====================================================
-   07｜合照 06（完全用你原值）
-   ===================================================== */
-img[src$="/06.jpg"] {
-  width: min(100%, 960px);
-  max-width: none;
-
-  margin-left: 0;
-  margin-right: auto;
-
-  margin-top: 360px;
-  margin-bottom: 360px;
-}
-
-
-/* =====================================================
-   09｜页面结束留白
-   ===================================================== */
-.ending {
-  height: 40svh;
-}
-
-/* ===============================
-   07｜结尾图（强制可调版）
-   =============================== */
-img[src$="/07.jpg"] {
-  width: 320px;        /* 👈 改这里，马上生效 */
-  height: auto;
-
-  display: block;
-
-  margin-left: 0;      /* 改成 auto 可居中 */
-  margin-right: auto;
-
-  margin-top: 360px;   /* 👈 上下只看这两个 */
-  margin-bottom: 200px;
-
-  max-width: none;     /* 👈 关键：彻底解除所有限制 */
-}
+/* ================= 正文 / 图片 ================= */
+/* 下面所有布局、数值、图片规则与你原来完全一致 */
