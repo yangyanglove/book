@@ -24,12 +24,14 @@ body {
   row-gap: 56px;
 
   /* 宋体衬线 · 目录感 */
-  font-family:
-    "Songti SC",
-    "STSong",
-    "Noto Serif SC",
-    "Source Han Serif SC",
-    serif;
+@font-face {
+  font-family: "SongWeb";
+  src: url("/book/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+body {
+  font-family: "SongWeb", serif;
 }
 
 /* 单本书 */
