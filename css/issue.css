@@ -1,28 +1,41 @@
+/* =================
+   基础重置
+   ================= */
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   background: #fff;
   color: #111;
+
+  /* 🔴 关键：字体一定写在 body */
+  font-family: "LXGW WenKai Lite", serif;
 }
 
+/* 图片统一 */
 img {
   width: 100%;
   display: block;
 }
 
-/* ================= 主体 ================= */
+/* =================
+   主体容器
+   ================= */
 
 .issue {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: "LXGW WenKai Lite", serif;
+
   font-size: 20px;
   line-height: 1.9;
 }
 
-/* ================= 封面 ================= */
+/* =================
+   封面
+   ================= */
 
 .cover {
   width: 100vw;
@@ -44,13 +57,15 @@ img {
   position: absolute;
   top: 32px;
   left: 32px;
+
   font-size: 58px;
   letter-spacing: 0.16em;
   color: #fff;
+
   z-index: 2;
 }
 
-/* 标题（永远不超出图片） */
+/* 封面标题 */
 .cover-title {
   position: absolute;
   left: 0;
@@ -70,13 +85,16 @@ img {
   z-index: 2;
 }
 
-/* ================= Pair ================= */
+/* =================
+   Pair 结构
+   ================= */
 
 @media (min-width: 769px) {
   .pair {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 72px;
+
     margin: 160px auto;
     align-items: center;
   }
@@ -99,7 +117,9 @@ img {
   margin: 0 0 1.6em;
 }
 
-/* ================= 04 ================= */
+/* =================
+   Feature（04）
+   ================= */
 
 .feature {
   max-width: 1100px;
@@ -116,13 +136,15 @@ img {
   margin: 48px auto 0;
 }
 
-/* ================= 05 补充（偏右但有呼吸感） ================= */
+/* =================
+   Supplement（05）
+   ================= */
 
 .supplement {
   max-width: 420px;
   margin: 120px 0 120px auto;
 
-  /* 核心：不要贴死右边 */
+  /* 不贴死右边 */
   margin-right: 120px;
 }
 
@@ -134,23 +156,27 @@ img {
   margin-top: 24px;
 }
 
-
-/* ================= 06（靠左但有内收） ================= */
+/* =================
+   Stack（06）
+   ================= */
 
 .stack .text {
   max-width: 420px;
 
-  /* 核心：不是居中，也不是顶格 */
+  /* 靠左但有内收 */
   margin-top: 48px;
   margin-left: 80px;
 }
 
-/* ================= 总结 ================= */
+/* =================
+   Ending
+   ================= */
 
 .ending {
   width: 100vw;
   min-height: 100vh;
   margin-left: calc(50% - 50vw);
+
   background: #f6f3ec;
   padding: 160px 24px;
 }
@@ -158,11 +184,14 @@ img {
 .ending-inner {
   max-width: 520px;
   margin: 0 auto;
+
   font-size: 17px;
   line-height: 2.2;
 }
 
-/* ================= 手机端 ================= */
+/* =================
+   手机端
+   ================= */
 
 @media (max-width: 768px) {
 
@@ -171,23 +200,23 @@ img {
     line-height: 2;
   }
 
-  /* ===== 封面文字整体放大 ===== */
-
+  /* 封面文字调整 */
   .cover-brand {
     top: 20px;
     left: 20px;
-    font-size: 58px;          /* 放大 */
-    letter-spacing: 0.12em;  /* 更像杂志 */
+
+    font-size: 58px;
+    letter-spacing: 0.12em;
   }
 
   .cover-title {
-    bottom: 80px;             /* ❗整体往上挪 */
-    font-size: clamp(42px, 12vw, 64px); /* 明显更大 */
+    bottom: 80px;
     padding: 0 20px;
+
+    font-size: clamp(42px, 12vw, 64px);
   }
 
-  /* ===== 正文节奏 ===== */
-
+  /* 正文节奏 */
   .pair,
   .feature,
   .supplement,
@@ -200,4 +229,3 @@ img {
     margin-right: auto;
   }
 }
-
