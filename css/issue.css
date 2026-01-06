@@ -43,13 +43,19 @@ img {
 
 /* ❗只有这两个用封面字体 */
 
-/* 左上角刊名 */
+/* 封面左上角刊名 */
 .cover-brand {
   position: absolute;
   top: 32px;
   left: 32px;
 
-  font-family: "BodySerif", serif !important;
+  font-family:
+    "Songti SC",
+    "STSong",
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    serif !important;
+
   font-size: 58px;
   letter-spacing: 0.16em;
   color: #fff;
@@ -70,7 +76,13 @@ img {
   color: #fff;
   font-weight: normal;
 
-  font-family: "BodySerif", serif !important;
+  font-family:
+    "Songti SC",
+    "STSong",
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    serif !important;
+
   font-size: clamp(160px, 8vw, 160px);
   line-height: 1.05;
 
@@ -193,3 +205,4 @@ img {
     margin-right: auto;
   }
 }
+
