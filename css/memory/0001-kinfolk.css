@@ -1,13 +1,13 @@
 /* ================= Fonts ================= */
 @font-face {
   font-family: "WenKai";
-  src: url("../../fonts/LXGWWenKai-Regular.ttf") format("truetype");
+  src: url("/book/fonts/LXGWWenKai-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "HanSerif";
-  src: url("../../fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+  src: url("/book/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
   font-display: swap;
 }
 
