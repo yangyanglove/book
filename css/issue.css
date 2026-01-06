@@ -15,10 +15,12 @@ img {
 
 /* ================= 主体 ================= */
 
+/* 正文：强制 WenKai（电脑 + 手机） */
 .issue {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: "TitleWenKai", "Kaiti SC", serif;
+
+  font-family: "WenKai", "Kaiti SC", serif;
   font-size: 20px;
   line-height: 1.9;
 }
@@ -39,28 +41,37 @@ img {
   height: auto;
 }
 
+/* 左上角刊名：宋体衬线 */
 .cover-brand {
   position: absolute;
   top: 32px;
   left: 32px;
+
+  font-family: "BodySerif", serif;
   font-size: 58px;
   letter-spacing: 0.16em;
   color: #fff;
   z-index: 2;
 }
 
+/* 封面标题：宋体衬线（和首页一致） */
 .cover-title {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 50px;
+
   margin: 0;
   padding: 0 24px;
+
   text-align: center;
   color: #fff;
   font-weight: normal;
+
+  font-family: "BodySerif", serif;
   font-size: clamp(160px, 8vw, 160px);
   line-height: 1.05;
+
   z-index: 2;
 }
 
@@ -84,6 +95,7 @@ img {
   }
 }
 
+/* 正文块 */
 .text {
   max-width: 420px;
 }
@@ -149,6 +161,7 @@ img {
 
 @media (max-width: 768px) {
 
+  /* 正文在手机端仍然 WenKai */
   .issue {
     font-size: 20px;
     line-height: 2;
@@ -157,7 +170,7 @@ img {
   .cover-brand {
     top: 20px;
     left: 20px;
-    font-size: 58px;
+    font-size: 42px;
     letter-spacing: 0.12em;
   }
 
