@@ -5,7 +5,7 @@
 /* ===== 字体声明（必须在最外层） ===== */
 @font-face {
   font-family: "SongWeb";
-  src: url("/yangyang-love/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+  src: url("/book/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
   font-display: swap;
 }
 
@@ -77,3 +77,4 @@ body {
   color: #555;
   margin: 0;
 }
+
