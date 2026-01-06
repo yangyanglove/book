@@ -23,10 +23,9 @@ body {
   column-gap: 32px;
   row-gap: 56px;
 
-  /* 宋体衬线 · 目录感 */
 @font-face {
   font-family: "SongWeb";
-  src: url("/book/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+  src: url("/yangyang-love/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
   font-display: swap;
 }
 
@@ -79,3 +78,4 @@ body {
   color: #555;
   margin: 0;
 }
+
