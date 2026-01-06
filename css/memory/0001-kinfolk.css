@@ -1,13 +1,17 @@
-/* ================= Fonts ================= */
+/* ================= Fonts (LOCAL WOFF2) ================= */
 @font-face {
-  font-family: "WenKai";
-  src: url("/book/fonts/LXGWWenKai-Regular.ttf") format("truetype");
+  font-family: "BodySerif";
+  src: url("/book/fonts/notoserifsc.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "HanSerif";
-  src: url("/book/fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+  font-family: "TitleWenKai";
+  src: url("/book/fonts/wenkai.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -31,7 +35,10 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "WenKai", serif;
+
+  /* ✅ 正文用宋体 */
+  font-family: "BodySerif", serif;
+
   font-size: var(--body);
   line-height: var(--lh);
   letter-spacing: .01em;
@@ -59,7 +66,9 @@ a {
 }
 
 .masthead__brand {
-  font-family: "HanSerif", serif;
+  /* ✅ 标题/刊名用文楷 */
+  font-family: "TitleWenKai", serif;
+
   font-size: 16px;
   letter-spacing: .18em;
   color: rgba(0,0,0,.45);
@@ -96,7 +105,10 @@ a {
 
 .cover__title {
   margin-top: 40px;
-  font-family: "HanSerif", serif;
+
+  /* ✅ 封面标题用文楷 */
+  font-family: "TitleWenKai", serif;
+
   font-size: var(--title);
   letter-spacing: .22em;
   line-height: 1.05;
