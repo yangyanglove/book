@@ -5,6 +5,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>memory-0001 · Christmas</title>
+
+  <!-- ✅ 新增：全站字体注册（只这一行） -->
+  <link rel="stylesheet" href="../../css/fonts.css" />
+
   <link rel="stylesheet" href="../../css/memory/0001-kinfolk.css" />
 </head> 
 
@@ -12,7 +16,9 @@
 
   <!-- 固定角标：刊名（像杂志 masthead / 水印） -->
   <header class="masthead" aria-label="site masthead">
-    <a class="masthead__brand" href="../index.html">阳阳愛の小船</a>
+    <!-- 原来是 ../index.html（会指向 /pages/memory/index.html，不存在）
+         ✅ 建议用 ../../index.html 回到根目录首页 -->
+    <a class="masthead__brand" href="../../index.html">阳阳愛の小船</a>
   </header>
 
   <main class="sheet">
@@ -22,32 +28,28 @@
       <div class="cover__air cover__air--top"></div>
 
       <figure class="cover__figure">
-        <!-- 你选的封面图：侧脸+手套那张
-             把 src 换成你的真实路径/文件名 -->
         <img class="cover__img"
              src="../../images/memory/0001/01.jpg"
              alt="Christmas at home — cover photo" />
       </figure>
 
-      <!-- 封面大标题（可改成中英双行） -->
       <h1 class="cover__title">CHRISTMAS DAY</h1>
 
       <div class="cover__air cover__air--bottom"></div>
 
-      <!-- 下滑提示（可删） -->
       <div class="hint" aria-hidden="true">
         <span class="hint__line"></span>
       </div>
     </section>
 
-    <!-- 2) 空页 / 极轻文字页（把 at home 换成你选的中文：在家/家里/圣诞·在家...） -->
+    <!-- 2) 空页 -->
     <section class="interlude" aria-label="interlude">
       <div class="interlude__space"></div>
       <p class="interlude__whisper">在家</p>
       <div class="interlude__space"></div>
     </section>
 
-    <!-- 3) 第一段正文（已写好） -->
+    <!-- 3) 第一段正文 -->
     <section class="textblock" aria-label="opening text">
       <div class="textblock__inner">
         <p>那天我们回到家，很自然地开始收拾。</p>
@@ -69,7 +71,7 @@
       </div>
     </section>
 
-    <!-- 4) 人物近景：你低头那张（把文件名换掉） -->
+    <!-- 4) 人物近景 -->
     <section class="photo photo--left" aria-label="portrait 1">
       <figure class="photo__figure">
         <img class="photo__img"
@@ -78,7 +80,7 @@
       </figure>
     </section>
 
-    <!-- 5) 摸头那张（把文件名换掉） + 可选一句话 -->
+    <!-- 5) 摸头 -->
     <section class="photo photo--right" aria-label="portrait 2">
       <figure class="photo__figure">
         <img class="photo__img"
@@ -86,11 +88,10 @@
              alt="portrait" />
       </figure>
 
-      <!-- 可选：二选一，想更克制就整段删掉 -->
       <p class="caption">摸摸头（挡住黑头发）。</p>
     </section>
 
-    <!-- 6) 猫停顿页：猫戴围巾（配一句“ 不太配合的小Y ”） -->
+    <!-- 6) 猫停顿页 -->
     <section class="pause" aria-label="cat pause">
       <div class="pause__air"></div>
 
@@ -105,7 +106,7 @@
       <div class="pause__air"></div>
     </section>
 
-    <!-- 7) 双人两张：第一张（对视/笑场那张） -->
+    <!-- 7) 双人第一张 -->
     <section class="photo photo--wide" aria-label="couple 1">
       <figure class="photo__figure">
         <img class="photo__img"
@@ -114,7 +115,7 @@
       </figure>
     </section>
 
-    <!-- 7) 较多文字（放在两张双人照之间或之后） -->
+    <!-- 7) 较多文字 -->
     <section class="textblock" aria-label="mid text">
       <div class="textblock__inner">
         <p>后来我们开始找机位。</p>
@@ -132,7 +133,7 @@
       </div>
     </section>
 
-    <!-- 7) 双人第二张（抱猫那张） -->
+    <!-- 7) 双人第二张 -->
     <section class="photo photo--wide" aria-label="couple 2">
       <figure class="photo__figure">
         <img class="photo__img"
@@ -141,7 +142,7 @@
       </figure>
     </section>
 
-    <!-- 8) 几天后的可爱暴击（不配图） -->
+    <!-- 8) 几天后的可爱暴击 -->
     <section class="textblock textblock--centered" aria-label="afterwards">
       <div class="textblock__inner">
         <p>过了几天，<br>
@@ -153,7 +154,7 @@
       </div>
     </section>
 
-    <!-- 9) 结尾图：猫特写 / 环境（不加文字，直接结束） -->
+    <!-- 9) 结尾图 -->
     <section class="photo photo--left" aria-label="closing photo">
       <figure class="photo__figure">
         <img class="photo__img"
@@ -162,7 +163,6 @@
       </figure>
     </section>
 
-    <!-- 结束留白（非常重要） -->
     <footer class="ending" aria-label="ending whitespace"></footer>
 
   </main>
