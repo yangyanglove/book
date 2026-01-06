@@ -1,6 +1,9 @@
 @font-face {
   font-family: "BodySerif";
-  src: url("../fonts/notoserifsc.woff2") format("woff2");
+  src:
+    url("../fonts/notoserifsc.woff2") format("woff2"),
+    url("../fonts/notoserifsc.woff") format("woff"),
+    url("../fonts/notoserifsc.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +11,10 @@
 
 @font-face {
   font-family: "TitleWenKai";
-  src: url("../fonts/wenkai.woff2") format("woff2");
+  src:
+    url("../fonts/wenkai.woff2") format("woff2"),
+    url("../fonts/wenkai.woff") format("woff"),
+    url("../fonts/wenkai.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
