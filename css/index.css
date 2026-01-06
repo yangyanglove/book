@@ -1,17 +1,14 @@
-/* ================= Fonts ================= */
+/* =========================
+   Index · 书架样式
+   ========================= */
+
+/* 字体注册（必须在最外层） */
 @font-face {
-  font-family: "BodySerif";
-  src: url("/book/fonts/notoserifsc.woff2") format("woff2");
+  font-family: "SongWeb";
+  src: url("../fonts/SourceHanSerifSC-Regular.otf") format("opentype");
   font-display: swap;
 }
 
-@font-face {
-  font-family: "TitleWenKai";
-  src: url("/book/fonts/wenkai.woff2") format("woff2");
-  font-display: swap;
-}
-
-/* ================= Base ================= */
 * {
   box-sizing: border-box;
 }
@@ -20,26 +17,29 @@ body {
   margin: 0;
   background: #fff;
   color: #111;
-  font-family: "BodySerif", serif;
+  font-family: "SongWeb", serif;
 }
 
-/* ================= 书架 ================= */
+/* 书架容器 */
 .index-grid {
   max-width: 1400px;
   margin: 0 auto;
   padding: 64px 24px;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   column-gap: 32px;
   row-gap: 56px;
 }
 
+/* 单本书 */
 .grid-item {
   display: block;
   text-decoration: none;
   color: #111;
 }
 
+/* 封面 */
 .grid-cover {
   aspect-ratio: 3 / 4;
   overflow: hidden;
@@ -52,6 +52,7 @@ body {
   display: block;
 }
 
+/* 图下文字 */
 .grid-text {
   margin-top: 14px;
   line-height: 1.65;
@@ -69,7 +70,6 @@ body {
   font-weight: 500;
   margin: 0 0 6px;
   letter-spacing: 0.01em;
-  font-family: "TitleWenKai", serif;
 }
 
 .grid-desc {
