@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- 页面标题：浏览器标签页显示 -->
+  <title>Timeline · 阳阳愛の小船</title>
+
+  <!-- 引入样式文件 -->
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js"></script>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       Timeline 正文开始
+       这是唯一的内容页面
+       ========================= -->
+
+<!-- =====================
+     分类视角切换（弱 UI）
+     ===================== -->
+<nav class="category-nav">
+  <button data-filter="all" class="is-active">全部</button>
+  <button data-filter="daily">日常</button>
+  <button data-filter="food">食物</button>
+  <button data-filter="travel">旅行</button>
+  <button data-filter="deep">深刻</button>
+</nav>
+
+  <main>
+
+    <!-- 第 1 期（一期 = 你定义的一个时间段） -->
+    <section class="issue">
+
+      <!-- 期标题：非常克制，用来表达这一期的主题 -->
+      <h2 class="issue-title">
+        第 1 期 · 冬天开始变慢的一周
+      </h2>
+
+      <!-- 时间范围：可写可不写 -->
+      <p class="issue-time">
+        2026.01.01 – 2026.01.07
+      </p>
+
+      <!-- =====================
+           下面是这一期的记录
+           ===================== -->
+
+      <!-- 记录 1 -->
+      <article class="entry" id="entry-001" data-category="daily">
+         <!-- 图片（可有可无） -->
+         <img src="../images/test-1.jpg" alt="">
+
+        <p>
+          今天开始做恋爱网页了<br>
+          值得纪念的一天。
+        </p>
+
+      </article>
+
+      <!-- 记录 2 -->
+      <article class="entry" id="entry-002" data-category="food">
+
+        <p>
+          晚上煮了面。<br>
+          盐放多了一点。
+        </p>
+
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

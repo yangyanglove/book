@@ -1,0 +1,79 @@
+/* =========================
+   Index · 书架样式
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+/* 书架容器 */
+.index-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 64px 24px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 32px;
+  row-gap: 56px;
+
+  /* 宋体衬线 · 目录感 */
+  font-family:
+    "Songti SC",
+    "STSong",
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    serif;
+}
+
+/* 单本书 */
+.grid-item {
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+
+/* 封面 */
+.grid-cover {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.grid-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 图下文字 */
+.grid-text {
+  margin-top: 14px;
+  line-height: 1.65;
+}
+
+.grid-meta {
+  font-size: 12px;
+  color: #777;
+  margin: 0 0 6px;
+  letter-spacing: 0.08em;
+}
+
+.grid-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  letter-spacing: 0.01em;
+}
+
+.grid-desc {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}

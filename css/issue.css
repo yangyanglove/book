@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "BookFont";
+  src: url("../fonts/LXGWWenKai-Regular.ttf") format("truetype");
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* ================= 主体 ================= */
+
+.issue {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "BookFont", "Kaiti SC", serif;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+/* ================= 封面 ================= */
+
+.cover {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.cover-inner {
+  position: relative;
+}
+
+/* 不裁图 */
+.cover-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* 左上角刊名 */
+.cover-brand {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  font-size: 58px;
+  letter-spacing: 0.16em;
+  color: #fff;
+  z-index: 2;
+}
+
+/* 标题（永远不超出图片） */
+.cover-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+
+  margin: 0;
+  padding: 0 24px;
+
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+
+  font-size: clamp(160px, 8vw, 160px);
+  line-height: 1.05;
+
+  z-index: 2;
+}
+
+/* ================= Pair ================= */
+
+@media (min-width: 769px) {
+  .pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    margin: 160px auto;
+    align-items: center;
+  }
+
+  .pair.swap {
+    direction: rtl;
+  }
+
+  .pair.swap > * {
+    direction: ltr;
+  }
+}
+
+/* 文本通用 */
+.text {
+  max-width: 420px;
+}
+
+.text p {
+  margin: 0 0 1.6em;
+}
+
+/* ================= 04 ================= */
+
+.feature {
+  max-width: 1100px;
+  margin: 200px auto;
+}
+
+.feature img {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.feature .text {
+  max-width: 520px;
+  margin: 48px auto 0;
+}
+
+/* ================= 05 补充（偏右但有呼吸感） ================= */
+
+.supplement {
+  max-width: 420px;
+  margin: 120px 0 120px auto;
+
+  /* 核心：不要贴死右边 */
+  margin-right: 120px;
+}
+
+.supplement img {
+  width: 100%;
+}
+
+.supplement .text {
+  margin-top: 24px;
+}
+
+
+/* ================= 06（靠左但有内收） ================= */
+
+.stack .text {
+  max-width: 420px;
+
+  /* 核心：不是居中，也不是顶格 */
+  margin-top: 48px;
+  margin-left: 80px;
+}
+
+/* ================= 总结 ================= */
+
+.ending {
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(50% - 50vw);
+  background: #f6f3ec;
+  padding: 160px 24px;
+}
+
+.ending-inner {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 2.2;
+}
+
+/* ================= 手机端 ================= */
+
+@media (max-width: 768px) {
+
+  .issue {
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  /* ===== 封面文字整体放大 ===== */
+
+  .cover-brand {
+    top: 20px;
+    left: 20px;
+    font-size: 58px;          /* 放大 */
+    letter-spacing: 0.12em;  /* 更像杂志 */
+  }
+
+  .cover-title {
+    bottom: 80px;             /* ❗整体往上挪 */
+    font-size: clamp(42px, 12vw, 64px); /* 明显更大 */
+    padding: 0 20px;
+  }
+
+  /* ===== 正文节奏 ===== */
+
+  .pair,
+  .feature,
+  .supplement,
+  .stack {
+    margin: 120px auto;
+  }
+
+  .supplement {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

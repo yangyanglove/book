@@ -1,0 +1,155 @@
+/* ========== Fonts ========== */
+@font-face {
+  font-family: "WenKai";
+  src: url("../../fonts/LXGWWenKai-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HanSerif";
+  src: url("../../fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+/* ========== Base ========== */
+:root {
+  --bg: #fbfaf7;
+  --text: #141312;
+  --muted: rgba(20,19,18,.6);
+  --hair: rgba(20,19,18,.12);
+
+  --pad: clamp(16px, 5vw, 44px);
+  --max: 980px;
+
+  --body: 15.5px;
+  --lh: 2;
+  --title: clamp(36px, 8vw, 72px);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "WenKai", serif;
+  font-size: var(--body);
+  line-height: var(--lh);
+  letter-spacing: .01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== Paper Texture (Very Light) ========== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0,0,0,.03), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(0,0,0,.025), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(0,0,0,.02), transparent 45%);
+  opacity: .5;
+}
+
+/* ========== Masthead ========== */
+.masthead {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 50;
+}
+
+.masthead__brand {
+  font-family: "HanSerif", serif;
+  font-size: 12px;
+  letter-spacing: .14em;
+  padding: 8px 10px;
+  border: 1px solid var(--hair);
+  background: rgba(251,250,247,.85);
+  backdrop-filter: blur(6px);
+}
+
+/* ========== Layout ========== */
+.sheet {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+/* ========== Cover ========== */
+.cover {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover__air--top { height: 18svh; }
+.cover__air--bottom { height: 30svh; }
+
+.cover__figure {
+  width: min(92%, 720px);
+}
+
+.cover__title {
+  margin-top: 26px;
+  font-family: "HanSerif", serif;
+  font-size: var(--title);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+/* ========== Interlude ========== */
+.interlude {
+  padding: 22svh 0;
+}
+
+.interlude__whisper {
+  font-size: 12px;
+  letter-spacing: .18em;
+  color: var(--muted);
+}
+
+/* ========== Text ========== */
+.textblock {
+  padding: 90px 0;
+}
+
+.textblock__inner {
+  width: min(46ch, 100%);
+}
+
+/* ========== Photos ========== */
+.photo {
+  padding: 80px 0;
+}
+
+.photo__figure {
+  width: min(86%, 720px);
+}
+
+.photo--left .photo__figure { margin-left: 0; }
+.photo--right .photo__figure { margin-left: auto; }
+.photo--wide .photo__figure { width: min(100%, 920px); }
+
+/* ========== Pause ========== */
+.pause {
+  padding: 110px 0;
+}
+
+.pause__figure {
+  width: min(78%, 640px);
+}
+
+.pause__line {
+  margin-top: 18px;
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+/* ========== Ending ========== */
+.ending {
+  height: 26svh;
+}
