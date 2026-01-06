@@ -1,34 +1,44 @@
 /* =================
-   基础重置
+   字体（统一）
    ================= */
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "BodySerif";
+  src: url("/book/fonts/notoserifsc.woff2") format("woff2");
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "TitleWenKai";
+  src: url("/book/fonts/wenkai.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* =================
+   基础
+   ================= */
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   background: #fff;
   color: #111;
-
-  /* 🔴 关键：字体一定写在 body */
-  font-family: "LXGW WenKai Lite", serif;
+  font-family: "BodySerif", serif;
 }
 
-/* 图片统一 */
 img {
   width: 100%;
   display: block;
 }
 
 /* =================
-   主体容器
+   主体
    ================= */
 
 .issue {
   max-width: 1200px;
   margin: 0 auto;
-
   font-size: 20px;
   line-height: 1.9;
 }
@@ -42,51 +52,38 @@ img {
   margin-left: calc(50% - 50vw);
 }
 
-.cover-inner {
-  position: relative;
+.cover-inner { position: relative; }
+
+.cover-brand,
+.cover-title,
+h1,
+h2 {
+  font-family: "TitleWenKai", serif;
 }
 
-/* 不裁图 */
-.cover-inner img {
-  width: 100%;
-  height: auto;
-}
-
-/* 左上角刊名 */
 .cover-brand {
   position: absolute;
   top: 32px;
   left: 32px;
-
   font-size: 58px;
   letter-spacing: 0.16em;
   color: #fff;
-
-  z-index: 2;
 }
 
-/* 封面标题 */
 .cover-title {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 50px;
-
-  margin: 0;
-  padding: 0 24px;
-
   text-align: center;
   color: #fff;
   font-weight: normal;
-
   font-size: clamp(160px, 8vw, 160px);
   line-height: 1.05;
-
-  z-index: 2;
 }
 
 /* =================
-   Pair 结构
+   Pair
    ================= */
 
 @media (min-width: 769px) {
@@ -94,31 +91,19 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 72px;
-
     margin: 160px auto;
     align-items: center;
   }
 
-  .pair.swap {
-    direction: rtl;
-  }
-
-  .pair.swap > * {
-    direction: ltr;
-  }
+  .pair.swap { direction: rtl; }
+  .pair.swap > * { direction: ltr; }
 }
 
-/* 文本通用 */
-.text {
-  max-width: 420px;
-}
-
-.text p {
-  margin: 0 0 1.6em;
-}
+.text { max-width: 420px; }
+.text p { margin: 0 0 1.6em; }
 
 /* =================
-   Feature（04）
+   Feature / Supplement / Stack
    ================= */
 
 .feature {
@@ -136,36 +121,14 @@ img {
   margin: 48px auto 0;
 }
 
-/* =================
-   Supplement（05）
-   ================= */
-
 .supplement {
   max-width: 420px;
-  margin: 120px 0 120px auto;
-
-  /* 不贴死右边 */
-  margin-right: 120px;
+  margin: 120px auto;
 }
-
-.supplement img {
-  width: 100%;
-}
-
-.supplement .text {
-  margin-top: 24px;
-}
-
-/* =================
-   Stack（06）
-   ================= */
 
 .stack .text {
   max-width: 420px;
-
-  /* 靠左但有内收 */
-  margin-top: 48px;
-  margin-left: 80px;
+  margin: 48px 0 0 80px;
 }
 
 /* =================
@@ -176,7 +139,6 @@ img {
   width: 100vw;
   min-height: 100vh;
   margin-left: calc(50% - 50vw);
-
   background: #f6f3ec;
   padding: 160px 24px;
 }
@@ -184,48 +146,6 @@ img {
 .ending-inner {
   max-width: 520px;
   margin: 0 auto;
-
   font-size: 17px;
   line-height: 2.2;
-}
-
-/* =================
-   手机端
-   ================= */
-
-@media (max-width: 768px) {
-
-  .issue {
-    font-size: 20px;
-    line-height: 2;
-  }
-
-  /* 封面文字调整 */
-  .cover-brand {
-    top: 20px;
-    left: 20px;
-
-    font-size: 58px;
-    letter-spacing: 0.12em;
-  }
-
-  .cover-title {
-    bottom: 80px;
-    padding: 0 20px;
-
-    font-size: clamp(42px, 12vw, 64px);
-  }
-
-  /* 正文节奏 */
-  .pair,
-  .feature,
-  .supplement,
-  .stack {
-    margin: 120px auto;
-  }
-
-  .supplement {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
