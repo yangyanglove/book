@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "BodySerif";
+  src: url("/book/fonts/notoserifsc.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TitleWenKai";
+  src: url("/book/fonts/wenkai.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
