@@ -2,6 +2,14 @@
    Index · 书架样式
    ========================= */
 
+@font-face {
+  font-family: "BodySerif";
+  src: url("/book/fonts/notoserifsc.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -70,6 +78,7 @@ body {
   color: #555;
   margin: 0;
 }
+
 
 
 
